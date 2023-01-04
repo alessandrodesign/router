@@ -1,0 +1,22 @@
+{
+  "name": "alessandrodesign/router",
+  "description": "Sistema de gestão de rotas",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Alessandro P. Souza",
+      "email": "alessandro-design@hotmail.com",
+      "role": "Developer",
+      "homepage": "https://www.alessandrodesign.com.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "NORTEdev\\Router\\": "src"
+    }
+  },
+  "require": {
+    "php": "^7.3"
+  }
+}

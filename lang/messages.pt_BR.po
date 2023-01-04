@@ -1,0 +1,8 @@
+msgid "Route not found"
+msgstr "Rota não encontrada"
+
+msgid "404 Not Found"
+msgstr "404 Nada encontrado"
+
+msgid "Route %s not found"
+msgstr "Rota %s não encontrada"
