@@ -44,7 +44,7 @@ class Router
         }
     }
 
-    public function add(string $method, string $path, callable $callback, $name = null): void
+    public function add(string $method, string $path, $callback, $name = null): void
     {
         $method = strtoupper($method);
         $this->routes[$method][$path] = $callback;
@@ -53,37 +53,37 @@ class Router
         }
     }
 
-    public function get(string $path, callable $callback, $name = null): Router
+    public function get(string $path, $callback, $name = null): Router
     {
         $this->add(self::METHOD_GET, $path, $callback, $name);
         return $this;
     }
 
-    public function post(string $path, callable $callback, $name = null): Router
+    public function post(string $path, $callback, $name = null): Router
     {
         $this->add(self::METHOD_POST, $path, $callback, $name);
         return $this;
     }
 
-    public function put(string $path, callable $callback, $name = null): Router
+    public function put(string $path, $callback, $name = null): Router
     {
         $this->add(self::METHOD_PUT, $path, $callback, $name);
         return $this;
     }
 
-    public function patch(string $path, callable $callback, $name = null): Router
+    public function patch(string $path, $callback, $name = null): Router
     {
         $this->add(self::METHOD_PATCH, $path, $callback, $name);
         return $this;
     }
 
-    public function delete(string $path, callable $callback, $name = null): Router
+    public function delete(string $path, $callback, $name = null): Router
     {
         $this->add(self::METHOD_DELETE, $path, $callback, $name);
         return $this;
     }
 
-    public function group(string $prefix, callable $callback, callable $middleware = null): void
+    public function group(string $prefix, $callback, $middleware = null): void
     {
         // create a new router instance
         $group = new self();
@@ -219,7 +219,7 @@ class Router
         }
     }
 
-    protected function callController(callable $callback, array $params, array $namespaces): void
+    protected function callController($callback, array $params, array $namespaces): void
     {
         // check if the callback is a controller and method string
         if (is_string($callback) && strpos($callback, '@') !== false) {
