@@ -1,8 +1,7 @@
 {
   "name": "alessandrodesign/router",
   "description": "Sistema de gestão de rotas",
-  "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
       "name": "Alessandro P. Souza",
